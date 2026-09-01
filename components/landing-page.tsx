@@ -32,16 +32,8 @@ const footerGroups = [
 
 function Brand() {
     return (
-        <a className="flex items-center gap-3 text-[#aa7635]" href="#top" aria-label="Lady Shopia — kembali ke atas">
-      <span className="relative size-9 shrink-0 rounded-full border border-[#e5cfaf] bg-[#f2dfc3] sm:size-10"
-            aria-hidden="true">
-        <span className="absolute left-[24%] top-[24%] size-[34%] rounded-full bg-[#d5a765]"/>
-        <span className="absolute right-[24%] bottom-[26%] size-[28%] rounded-full bg-[#8d622f]"/>
-      </span>
-            <span>
-        <strong className="block font-display text-xl leading-none font-bold sm:text-2xl">Lady Shopia</strong>
-        <span className="block text-[7px] tracking-[.14em] uppercase sm:text-[8px]">Sleepwear and Fashion</span>
-      </span>
+        <a href="#top" aria-label="Lady Shopia — kembali ke atas">
+            <Image className="h-14 w-auto sm:h-16" src="/main_logo.webp" alt="" width={9212} height={7615}/>
         </a>
     );
 }
@@ -60,9 +52,8 @@ function Header() {
                     <a className="hover:opacity-75" href={highlightedNavigation.href}
                        style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</a>
                 </nav>
-                <a className="hidden border border-[#b78a50] bg-white px-4.5 py-2.5 text-center font-display text-sm leading-[1.1] font-bold whitespace-nowrap text-[#91662e] xl:block"
-                   href="#oneset">
-                    RINDU BERSIK<br/>× Lady Shopia
+                <a className="hidden xl:block" href="#oneset" aria-label="Rindu Bersik × Lady Shopia">
+                    <Image className="h-11 w-auto" src="/secondary_logo.webp" alt="" width={1715} height={479}/>
                 </a>
                 <details className="relative xl:hidden">
                     <summary
