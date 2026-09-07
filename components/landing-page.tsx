@@ -1,12 +1,13 @@
 import Image from "next/image";
 import {QuantitySelector} from "@/components/quantity-selector";
+import {CatalogSection} from "@/components/catalog-section";
 
 const navigation = [
     ["Best Seller", "#best"],
     ["One Set", "#oneset"],
     ["Dress", "#newest"],
     ["Premium Series", "#newest"],
-    ["Katalog", "#oneset"],
+    ["Katalog", "#catalog"],
 ] as const;
 
 const highlightedNavigation = {label: "Lencer", href: "#footer", color: "#51a2a4"} as const;
@@ -259,6 +260,7 @@ export function LandingPage() {
                 <NewestCollection/>
                 <BestSeller/>
                 <OneSetCollection/>
+                <CatalogSection/>
             </main>
             <Footer/>
         </>
