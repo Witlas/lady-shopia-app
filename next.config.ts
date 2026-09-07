@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
         pathname: "/photo-**",
       },
+      {
+        protocol: "https",
+        hostname: "down-id.img.susercontent.com",
+        pathname: "/file/**",
+      },
+      {
+        protocol: "https",
+        hostname: "assets.zyrosite.com",
+        pathname: "/**",
+      },
     ],
   },
 };

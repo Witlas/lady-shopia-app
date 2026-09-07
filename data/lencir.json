@@ -1,0 +1,64 @@
+{
+  "storeUrl": "https://shopee.co.id/lencirindonesia",
+  "hero": {
+    "eyebrow": "Daily body ritual",
+    "title": "Lencir",
+    "description": "Temukan rangkaian body care dan wellness Lencir untuk melengkapi rutinitas harianmu.",
+    "image": {
+      "src": "https://down-id.img.susercontent.com/file/id-11134207-7r98t-lt1063doxke50b",
+      "alt": "Lencir Almond Milk Concentrate dan Almond Shower Gel"
+    }
+  },
+  "categories": [
+    {
+      "name": "Body care",
+      "description": "Perawatan tubuh untuk rutinitas pagi dan malam."
+    },
+    {
+      "name": "Wellness drink",
+      "description": "Pilihan minuman praktis untuk menemani keseharian."
+    },
+    {
+      "name": "Bundling",
+      "description": "Paket produk untuk rutinitas yang lebih lengkap."
+    }
+  ],
+  "products": [
+    {
+      "name": "Almond Milk Concentrate",
+      "category": "Body lotion · 535 ml",
+      "description": "Body lotion dengan tekstur creamy dalam kemasan berukuran besar.",
+      "image": {
+        "src": "https://down-id.img.susercontent.com/file/id-11134207-7r98z-lu7kso7nyhwrff",
+        "alt": "Lencir Almond Milk Concentrate Body Lotion"
+      }
+    },
+    {
+      "name": "Almond Shower Gel",
+      "category": "Body wash · 535 ml",
+      "description": "Shower gel berwarna keemasan untuk melengkapi ritual mandi harian.",
+      "image": {
+        "src": "https://down-id.img.susercontent.com/file/id-11134207-7r98y-lslmkw2a3fba37",
+        "alt": "Lencir Almond Shower Gel"
+      }
+    },
+    {
+      "name": "Almond Body Care Duo",
+      "category": "Bundling · 2 produk",
+      "description": "Pasangan shower gel dan body lotion dalam satu rangkaian body care.",
+      "image": {
+        "src": "https://down-id.img.susercontent.com/file/id-11134207-7r991-lt567wl14gfbfe",
+        "alt": "Paket Lencir Almond Shower Gel dan Almond Milk Concentrate"
+      }
+    },
+    {
+      "name": "Lencir Strong",
+      "category": "Wellness drink · 10 sachet",
+      "description": "Minuman Lencir rasa Black Ruby Plum dalam kemasan sachet yang mudah dibawa.",
+      "image": {
+        "src": "https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D768%2Ch%3D815%2Cfit%3Dcrop/YX4jVKaMjPfO6Bqb/lencir-silver-2-yOEOaoSHUwymzgEd.webp",
+        "alt": "Lencir Strong rasa Black Ruby Plum"
+      }
+    }
+  ]
+}

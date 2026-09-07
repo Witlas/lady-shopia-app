@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {QuantitySelector} from "@/components/quantity-selector";
 import {CatalogSection} from "@/components/catalog-section";
 
@@ -10,7 +11,7 @@ const navigation = [
     ["Katalog", "#catalog"],
 ] as const;
 
-const highlightedNavigation = {label: "Lencer", href: "#footer", color: "#51a2a4"} as const;
+const highlightedNavigation = {label: "Lencir", href: "/lencir", color: "#51a2a4"} as const;
 
 const oneSetProducts = [
     ["https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?auto=format&fit=crop&w=600&q=86", "Iyla Home Dress biru"],
@@ -50,8 +51,8 @@ function Header() {
                     aria-label="Navigasi utama">
                     {navigation.map(([label, href]) => <a className="hover:text-ink" href={href}
                                                           key={label}>{label}</a>)}
-                    <a className="hover:opacity-75" href={highlightedNavigation.href}
-                       style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</a>
+                    <Link className="hover:opacity-75" href={highlightedNavigation.href}
+                          style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</Link>
                 </nav>
                 <a className="hidden xl:block" href="#oneset" aria-label="Rindu Bersik × Lady Shopia">
                     <Image className="h-11 w-auto" src="/secondary_logo.webp" alt="" width={1715} height={479}/>
@@ -66,8 +67,8 @@ function Header() {
                         aria-label="Navigasi seluler">
                         {navigation.map(([label, href]) => <a className="rounded px-4 py-2.5 hover:bg-cream" href={href}
                                                               key={label}>{label}</a>)}
-                        <a className="rounded px-4 py-2.5 hover:bg-cream" href={highlightedNavigation.href}
-                           style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</a>
+                        <Link className="rounded px-4 py-2.5 hover:bg-cream" href={highlightedNavigation.href}
+                              style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</Link>
                     </nav>
                 </details>
             </div>
