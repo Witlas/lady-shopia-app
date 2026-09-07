@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {QuantitySelector} from "@/components/quantity-selector";
 import {CatalogSection} from "@/components/catalog-section";
+import riberFest from "@/data/riber-fest.json";
 
 const navigation = [
     ["Best Seller", "#best"],
@@ -258,6 +259,16 @@ export function LandingPage() {
             <Header/>
             <main id="top">
                 <Hero/>
+                <section className="bg-[#141410] px-6 py-10 text-[#fffbf0] sm:px-8">
+                    <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-6">
+                        <div>
+                            <p className="text-[10px] font-bold tracking-[.2em] text-[#f5a623] uppercase">Exclusive merchandise · {riberFest.edition}</p>
+                            <h2 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">{riberFest.name}. Bawa pulang ceritanya.</h2>
+                            <p className="mt-3 text-sm text-[#c6c2b5]">T-shirt & aksesori · Pratinjau koleksi</p>
+                        </div>
+                        <Link href="/riber-fest/vol-3" className="inline-flex min-h-12 items-center gap-8 bg-[#f5a623] px-6 py-3 text-sm font-bold text-[#141410] hover:bg-[#ffbd4a]">Lihat koleksi <span aria-hidden="true">→</span></Link>
+                    </div>
+                </section>
                 <NewestCollection/>
                 <BestSeller/>
                 <OneSetCollection/>

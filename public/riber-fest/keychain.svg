@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <circle cx="300" cy="135" r="57" fill="none" stroke="#8e8b7f" stroke-width="14"/>
+  <circle cx="300" cy="135" r="57" fill="none" stroke="#eeebe2" stroke-width="5"/>
+  <path d="M300 181v65" stroke="#8e8b7f" stroke-width="13"/>
+  <rect x="169" y="219" width="262" height="257" rx="65" fill="#f5a623" stroke="#fff3d3" stroke-width="9" transform="rotate(-9 300 347)"/>
+  <g fill="#25251f" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" transform="rotate(-9 300 347)"><text x="300" y="326" font-size="53">RIBER</text><text x="300" y="380" font-size="53">FEST.</text><text x="300" y="418" font-size="16" letter-spacing="4">VOL. 3</text></g>
+</svg>

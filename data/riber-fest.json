@@ -1,0 +1,16 @@
+{
+  "slug": "riber-fest-vol-3",
+  "name": "Riber Fest",
+  "edition": "Vol. 3",
+  "theme": "Perihal luka dan memaafkan",
+  "description": "Bawa pulang sedikit cerita dari panggung. Jelajahi T-shirt dan aksesori Riber Fest bersama Lady Shopia.",
+  "isDemo": true,
+  "products": [
+    { "id": "demo-lineup", "sourceId": null, "slug": "official-lineup-t-shirt", "name": "Official Lineup T-shirt", "category": "T-shirt", "description": "Ilustrasi kaos edisi lineup untuk menemani hari konsermu.", "price": 129000, "images": [{ "src": "/riber-fest/t-shirt.svg", "alt": "Ilustrasi contoh kaos Riber Fest" }], "variants": [{ "slug": "m", "name": "M", "price": 129000 }, { "slug": "l", "name": "L", "price": 129000 }, { "slug": "xl", "name": "XL", "price": 129000 }] },
+    { "id": "demo-pesmo-white", "sourceId": null, "slug": "pesmo-white-t-shirt", "name": "Pesmo T-shirt · White", "category": "T-shirt", "description": "Konsep kaos Pesmo edisi putih. Detail desain dan bahan akan diumumkan saat koleksi dirilis.", "price": 119000, "images": [{ "src": "/riber-fest/t-shirt-white.svg", "alt": "Ilustrasi contoh kaos putih Riber Fest" }], "variants": [{ "slug": "m", "name": "M", "price": 119000 }, { "slug": "l", "name": "L", "price": 119000 }, { "slug": "xl", "name": "XL", "price": 119000 }] },
+    { "id": "demo-pesmo-black", "sourceId": null, "slug": "pesmo-black-t-shirt", "name": "Pesmo T-shirt · Black", "category": "T-shirt", "description": "Konsep kaos Pesmo edisi hitam untuk kenangan yang tetap dekat setelah musik selesai.", "price": 119000, "images": [{ "src": "/riber-fest/t-shirt.svg", "alt": "Ilustrasi contoh kaos hitam Riber Fest" }], "variants": [{ "slug": "m", "name": "M", "price": 119000 }, { "slug": "l", "name": "L", "price": 119000 }, { "slug": "xl", "name": "XL", "price": 119000 }] },
+    { "id": "demo-pesmo-keychain", "sourceId": null, "slug": "pesmo-keychain", "name": "Keychain Acrylic Pesmo", "category": "Aksesori", "description": "Konsep gantungan kunci Pesmo, kenangan kecil yang bisa dibawa setiap hari.", "price": 25000, "images": [{ "src": "/riber-fest/keychain.svg", "alt": "Ilustrasi contoh gantungan kunci Riber Fest" }], "variants": [] },
+    { "id": "demo-pesmo-keychain-2", "sourceId": null, "slug": "pesmo-keychain-2", "name": "Keychain Acrylic Pesmo 2", "category": "Aksesori", "description": "Alternatif desain gantungan kunci Pesmo. Foto produk final akan hadir saat perilisan.", "price": 25000, "images": [{ "src": "/riber-fest/keychain.svg", "alt": "Ilustrasi contoh gantungan kunci Pesmo edisi kedua" }], "variants": [] },
+    { "id": "demo-cloud-keychain", "sourceId": null, "slug": "cloud-keychain", "name": "Keychain Acrylic Cloud", "category": "Aksesori", "description": "Konsep aksesori edisi Cloud untuk melengkapi koleksi kenangan konsermu.", "price": 25000, "images": [{ "src": "/riber-fest/keychain.svg", "alt": "Ilustrasi sementara gantungan kunci edisi Cloud" }], "variants": [] }
+  ]
+}
