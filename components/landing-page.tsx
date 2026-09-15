@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {QuantitySelector} from "@/components/quantity-selector";
+import {OrderForm} from "@/components/order-form";
 import {CatalogSection} from "@/components/catalog-section";
 import riberFest from "@/data/riber-fest.json";
 
@@ -178,7 +178,7 @@ function NewestCollection() {
                             Fit</strong><span className="text-xs text-[#b1824a]">Cocok hingga ukuran XL.</span></p>
                     </div>
                     <p className="mt-7 mb-2 font-display font-semibold text-[#a16c2b] uppercase">Qty</p>
-                    <QuantitySelector/>
+                    <OrderForm productName="Lumière Flora Dress — All Size" price={329000}/>
                 </div>
                 <div
                     className="flex min-h-[420px] items-center justify-center gap-5 overflow-hidden px-5 lg:min-h-[530px]">

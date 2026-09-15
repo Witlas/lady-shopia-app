@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { QuantitySelector } from "@/components/quantity-selector";
+import { OrderForm } from "@/components/order-form";
 import { formatPrice, type Product } from "@/lib/catalog";
 
 export function ProductDetail({ product }: { product: Product }) {
@@ -86,7 +86,12 @@ export function ProductDetail({ product }: { product: Product }) {
 
             <div className="mt-7">
               <p className="mb-2 text-xs font-bold tracking-[.16em] text-[#8f632e] uppercase">Jumlah</p>
-              <QuantitySelector />
+              <OrderForm
+                productName={product.name}
+                variantName={variant?.name}
+                price={variant?.price ?? product.price}
+                disabled={Boolean(product.variants?.length && !variant)}
+              />
             </div>
           </div>
 
