@@ -13,6 +13,7 @@ const navigation = [
 ] as const;
 
 const highlightedNavigation = {label: "Lencir", href: "/lencir", color: "#51a2a4"} as const;
+const riberFestNavigation = {label: "Riber Fest", href: "/riber-fest/vol-3", color: "#f5a623"} as const;
 
 const oneSetProducts = [
     ["https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?auto=format&fit=crop&w=600&q=86", "Iyla Home Dress biru"],
@@ -48,12 +49,14 @@ function Header() {
                 className="mx-auto grid w-[min(1240px,calc(100%_-_24px))] grid-cols-[1fr_auto] items-center gap-6 lg:w-[min(1240px,calc(100%_-_40px))] xl:grid-cols-[240px_1fr_auto]">
                 <Brand/>
                 <nav
-                    className="hidden items-center justify-center gap-18 font-display text-[17px] font-semibold text-[#95682f] xl:flex"
+                    className="hidden items-center justify-center gap-18 whitespace-nowrap font-display text-[17px] font-semibold text-[#95682f] xl:flex"
                     aria-label="Navigasi utama">
                     {navigation.map(([label, href]) => <a className="hover:text-ink" href={href}
                                                           key={label}>{label}</a>)}
-                    <Link className="hover:opacity-75" href={highlightedNavigation.href}
+                                        <Link className="whitespace-nowrap hover:opacity-75" href={highlightedNavigation.href}
                           style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</Link>
+                                            <Link className="whitespace-nowrap hover:opacity-75" href={riberFestNavigation.href}
+                          style={{color: riberFestNavigation.color}}>{riberFestNavigation.label}</Link>
                 </nav>
                 <a className="hidden xl:block" href="#oneset" aria-label="Rindu Bersik × Lady Shopia">
                     <Image className="h-11 w-auto" src="/secondary_logo.webp" alt="" width={1715} height={479}/>
@@ -64,12 +67,14 @@ function Header() {
                         aria-label="Buka menu">☰
                     </summary>
                     <nav
-                        className="absolute top-[calc(100%+14px)] right-0 flex w-56 flex-col border border-line bg-white p-2 font-display text-lg font-semibold text-gold shadow-xl"
+                        className="absolute top-[calc(100%+14px)] right-0 flex w-56 flex-col whitespace-nowrap border border-line bg-white p-2 font-display text-lg font-semibold text-gold shadow-xl"
                         aria-label="Navigasi seluler">
                         {navigation.map(([label, href]) => <a className="rounded px-4 py-2.5 hover:bg-cream" href={href}
                                                               key={label}>{label}</a>)}
-                        <Link className="rounded px-4 py-2.5 hover:bg-cream" href={highlightedNavigation.href}
+                        <Link className="rounded px-4 py-2.5 whitespace-nowrap hover:bg-cream" href={highlightedNavigation.href}
                               style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</Link>
+                        <Link className="rounded px-4 py-2.5 whitespace-nowrap hover:bg-cream" href={riberFestNavigation.href}
+                            style={{color: riberFestNavigation.color}}>{riberFestNavigation.label}</Link>
                     </nav>
                 </details>
             </div>
