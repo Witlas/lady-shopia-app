@@ -3,17 +3,7 @@ import Link from "next/link";
 import {OrderForm} from "@/components/order-form";
 import {CatalogSection} from "@/components/catalog-section";
 import riberFest from "@/data/riber-fest.json";
-
-const navigation = [
-    ["Best Seller", "#best"],
-    ["One Set", "#oneset"],
-    ["Dress", "#newest"],
-    ["Premium Series", "#newest"],
-    ["Katalog", "#catalog"],
-] as const;
-
-const highlightedNavigation = {label: "Lencir", href: "/lencir", color: "#51a2a4"} as const;
-const riberFestNavigation = {label: "Riber Fest", href: "/riber-fest/vol-3", color: "#f5a623"} as const;
+import { CartButton } from "@/components/shop-cart";
 
 const oneSetProducts = [
     ["https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?auto=format&fit=crop&w=600&q=86", "Iyla Home Dress biru"],
@@ -31,7 +21,7 @@ const bestSellerImages = [
 const footerGroups = [
     ["Koleksi", ["Best Seller", "One Set", "Dress", "Premium Series"]],
     ["Bantuan", ["Cara Order", "Panduan Ukuran", "Pengiriman", "Hubungi Kami"]],
-    ["Ikuti Kami", ["Instagram", "TikTok", "Shopee", "WhatsApp"]],
+    ["Ikuti Kami", ["Instagram", "TikTok", "Shopee", "Email"]],
 ] as const;
 
 function Brand() {
@@ -44,41 +34,42 @@ function Brand() {
 
 function Header() {
     return (
-        <header className="sticky top-0 z-50 flex h-[72px] items-center border-b border-[#f1ebe2] bg-white lg:h-[86px]">
-            <div
-                className="mx-auto grid w-[min(1240px,calc(100%_-_24px))] grid-cols-[1fr_auto] items-center gap-6 lg:w-[min(1240px,calc(100%_-_40px))] xl:grid-cols-[240px_1fr_auto]">
-                <Brand/>
-                <nav
-                    className="hidden items-center justify-center gap-18 whitespace-nowrap font-display text-[17px] font-semibold text-[#95682f] xl:flex"
-                    aria-label="Navigasi utama">
-                    {navigation.map(([label, href]) => <a className="hover:text-ink" href={href}
-                                                          key={label}>{label}</a>)}
-                                        <Link className="whitespace-nowrap hover:opacity-75" href={highlightedNavigation.href}
-                          style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</Link>
-                                            <Link className="whitespace-nowrap hover:opacity-75" href={riberFestNavigation.href}
-                          style={{color: riberFestNavigation.color}}>{riberFestNavigation.label}</Link>
-                </nav>
-                <a className="hidden xl:block" href="#oneset" aria-label="Rindu Bersik × Lady Shopia">
-                    <Image className="h-11 w-auto" src="/secondary_logo.webp" alt="" width={1715} height={479}/>
-                </a>
-                <details className="relative xl:hidden">
-                    <summary
-                        className="grid size-11 cursor-pointer list-none place-items-center text-2xl marker:content-none"
-                        aria-label="Buka menu">☰
-                    </summary>
-                    <nav
-                        className="absolute top-[calc(100%+14px)] right-0 flex w-56 flex-col whitespace-nowrap border border-line bg-white p-2 font-display text-lg font-semibold text-gold shadow-xl"
-                        aria-label="Navigasi seluler">
-                        {navigation.map(([label, href]) => <a className="rounded px-4 py-2.5 hover:bg-cream" href={href}
-                                                              key={label}>{label}</a>)}
-                        <Link className="rounded px-4 py-2.5 whitespace-nowrap hover:bg-cream" href={highlightedNavigation.href}
-                              style={{color: highlightedNavigation.color}}>{highlightedNavigation.label}</Link>
-                        <Link className="rounded px-4 py-2.5 whitespace-nowrap hover:bg-cream" href={riberFestNavigation.href}
-                            style={{color: riberFestNavigation.color}}>{riberFestNavigation.label}</Link>
-                    </nav>
-                </details>
+        <>
+            <div className="bg-[#382c25] px-4 py-2 text-center text-[10px] font-semibold tracking-[.18em] text-white uppercase sm:text-xs">
+                Gratis ongkir Jabodetabek untuk pesanan di atas Rp 300.000
             </div>
-        </header>
+            <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f6f1e8]/90 backdrop-blur-[18px]">
+                <div className="mx-auto flex h-20 w-full max-w-[1500px] items-center justify-between gap-6 px-5 md:px-9">
+                <Brand/>
+                <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label="Navigasi toko">
+                    <a className="hover:opacity-60" href="#catalog">All Products</a>
+                    <a className="hover:opacity-60" href="#newest">Dress</a>
+                    <a className="hover:opacity-60" href="#oneset">One Set</a>
+                    <a className="hover:opacity-60" href="#catalog">Premium Series</a>
+                    <a className="hover:opacity-60" href="#footer">Track Order</a>
+                </nav>
+                <div className="flex items-center gap-3">
+                    <CartButton/>
+                    <details className="relative lg:hidden">
+                        <summary className="grid size-10 cursor-pointer list-none place-items-center text-xl marker:content-none" aria-label="Buka menu">☰</summary>
+                        <nav className="absolute top-[calc(100%+12px)] right-0 flex w-56 flex-col gap-1 border border-black/10 bg-[#f6f1e8] p-2 text-sm shadow-xl" aria-label="Navigasi toko mobile">
+                            <a className="px-3 py-2 hover:bg-white/60" href="#catalog">All Products</a>
+                            <a className="px-3 py-2 hover:bg-white/60" href="#newest">Dress</a>
+                            <a className="px-3 py-2 hover:bg-white/60" href="#oneset">One Set</a>
+                            <a className="px-3 py-2 hover:bg-white/60" href="#catalog">Premium Series</a>
+                            <a className="px-3 py-2 hover:bg-white/60" href="#footer">Track Order</a>
+                        </nav>
+                    </details>
+                </div>
+                </div>
+            </header>
+            <div className="border-b border-black/10 bg-white/35">
+                <div className="mx-auto flex max-w-[1500px] flex-col gap-2 px-5 py-3 text-xs sm:flex-row sm:items-center sm:justify-between md:px-9">
+                    <span className="text-black/50">Kamu sedang berada di online shop Lady Shopia.</span>
+                    <a href="#catalog" className="font-medium hover:opacity-60">Lihat katalog <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </>
     );
 }
 
@@ -178,7 +169,7 @@ function NewestCollection() {
                             Fit</strong><span className="text-xs text-[#b1824a]">Cocok hingga ukuran XL.</span></p>
                     </div>
                     <p className="mt-7 mb-2 font-display font-semibold text-[#a16c2b] uppercase">Qty</p>
-                    <OrderForm productName="Lumière Flora Dress — All Size" price={329000}/>
+                    <OrderForm productSlug="lumiere-flora-dress" variantSlug="all-size"/>
                 </div>
                 <div
                     className="flex min-h-[420px] items-center justify-center gap-5 overflow-hidden px-5 lg:min-h-[530px]">

@@ -17,6 +17,6 @@ Prices are numeric Indonesian rupiah amounts, not formatted strings. Product `sl
 
 `description`, `category`, and `variants` need editorial/merchant input. Variant records use the existing catalog shape: `slug`, `name`, and numeric `price`; an empty array means no size choices. Missing price/image values must be resolved before publication. Remote images need their exact host/path allowed in `next.config.ts`, or can be copied into `public/riber-fest`.
 
-Do not import Riber's `link`: it currently points to WhatsApp. No Riber API, database credentials, or synchronization are connected here. Update the order links in Riber separately to the final Lady Shopia destinations.
+Do not import Riber's `link`: it belongs to a separate campaign flow. No Riber API, database credentials, or synchronization are connected here. Update the campaign links separately to the final Lady Shopia destinations.
 
 Set `isDemo` to false only after replacing and verifying sample content. Changing this flag only removes the demo notice. Ordering requires a separate implementation. Remove the page's noindex metadata when the real collection is ready to publish.

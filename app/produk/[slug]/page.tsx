@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductDetail } from "@/components/product-detail";
 import { getProduct, getProductSeries, products } from "@/lib/catalog";
+import { CartButton } from "@/components/shop-cart";
 
 type ProductPageProps = { params: Promise<{ slug: string }> };
 
@@ -25,12 +27,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <>
-      <header className="border-b border-[#eadfce] bg-white">
-        <div className="mx-auto flex h-[72px] max-w-[1240px] items-center justify-between px-4 sm:px-8">
-          <Link href="/" className="font-display text-2xl font-bold text-[#95682f]">Lady Shopia</Link>
-          <div className="text-right text-[10px] font-bold tracking-[.16em] text-[#51a2a4] uppercase">
-            {series?.name ?? "Koleksi pilihan"}
-          </div>
+      <header className="border-b border-[#eadfce] bg-white/95 backdrop-blur-sm">
+        <div className="mx-auto flex h-20 max-w-[1500px] items-center justify-between px-5 md:px-9">
+          <Link href="/" aria-label="Lady Shopia — kembali ke beranda"><Image src="/main_logo.webp" alt="Lady Shopia" width={9212} height={7615} className="h-12 w-auto" /></Link>
+          <div className="flex items-center gap-5"><div className="text-right text-[10px] font-bold tracking-[.16em] text-[#51a2a4] uppercase">{series?.name ?? "Koleksi pilihan"}</div><CartButton/></div>
         </div>
       </header>
       <ProductDetail product={product} />
