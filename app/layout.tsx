@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import { ShopProvider } from "@/components/shop-cart";
 import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="id" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="min-h-dvh bg-white font-sans text-ink antialiased">
-        {children}
+        <ShopProvider>{children}</ShopProvider>
       </body>
     </html>
   );

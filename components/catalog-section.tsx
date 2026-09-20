@@ -7,6 +7,7 @@ import {
   seriesPriceRange,
   type Product,
 } from "@/lib/catalog";
+import { AddToCartButton } from "@/components/shop-cart";
 
 function ProductCard({ product }: { product: Product }) {
   return (
@@ -31,7 +32,7 @@ function ProductCard({ product }: { product: Product }) {
             <h4 className="font-display text-xl font-semibold text-[#382c25] sm:text-2xl">
               {product.name}
             </h4>
-            <p className="mt-1 text-sm font-semibold text-[#946329]">
+          <p className="mt-1 text-sm font-semibold text-[#946329]">
               {formatPriceRange(productPriceRange(product))}
             </p>
           </div>
@@ -40,6 +41,7 @@ function ProductCard({ product }: { product: Product }) {
           </span>
         </div>
       </Link>
+      <AddToCartButton product={product}/>
     </article>
   );
 }
