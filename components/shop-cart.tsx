@@ -67,6 +67,10 @@ export function CartButton() {
   );
 }
 
+export function AccountButton() {
+  return <Link href="/login" className="grid size-10 place-items-center text-[#1b1a18] hover:opacity-60" aria-label="Login customer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-3.3 3.3-5 7.5-5s6.7 1.7 7.5 5"/></svg></Link>;
+}
+
 export function AddToCartButton({ product, variantSlug, quantity = 1 }: { product: Product; variantSlug?: string; quantity?: number }) {
   const { addItem } = useShopCart();
   return <button type="button" onClick={() => addItem(product, quantity, variantSlug)} className="mt-3 min-h-10 w-full bg-[#382c25] px-3 text-xs font-bold tracking-[.12em] text-white uppercase transition-colors hover:bg-[#51a2a4]">+ Keranjang</button>;
