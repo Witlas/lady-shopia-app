@@ -4,6 +4,7 @@ import {OrderForm} from "@/components/order-form";
 import {CatalogSection} from "@/components/catalog-section";
 import riberFest from "@/data/riber-fest.json";
 import { AccountButton, CartButton } from "@/components/shop-cart";
+import { MobileMenu } from "@/components/mobile-menu";
 
 const oneSetProducts = [
     ["https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?auto=format&fit=crop&w=600&q=86", "Iyla Home Dress biru"],
@@ -38,9 +39,12 @@ function Header() {
             <div className="bg-[#382c25] px-4 py-2 text-center text-[10px] font-semibold tracking-[.18em] text-white uppercase sm:text-xs">
                 Gratis ongkir Jabodetabek untuk pesanan di atas Rp 300.000
             </div>
-            <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f6f1e8]/90 backdrop-blur-[18px]">
-                <div className="mx-auto flex h-20 w-full max-w-[1500px] items-center justify-between gap-6 px-5 md:px-9">
-                <Brand/>
+            <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f6f1e8]">
+                <div className="relative mx-auto flex h-20 w-full max-w-[1500px] items-center justify-between gap-6 px-5 md:px-9">
+                <MobileMenu/>
+                <div className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
+                    <Brand/>
+                </div>
                 <nav className="hidden items-center gap-7 text-sm lg:flex" aria-label="Navigasi toko">
                     <a className="hover:opacity-60" href="#catalog">Shop All</a>
                     <a className="hover:opacity-60" href="#newest">Dress</a>
@@ -53,18 +57,6 @@ function Header() {
                     <a className="hidden border-r border-black/15 pr-4 text-xs hover:opacity-60 lg:block" href="#footer">Track Order</a>
                     <CartButton/>
                     <AccountButton/>
-                    <details className="relative lg:hidden">
-                        <summary className="grid size-10 cursor-pointer list-none place-items-center text-xl marker:content-none" aria-label="Buka menu">☰</summary>
-                        <nav className="absolute top-[calc(100%+12px)] right-0 flex w-56 flex-col gap-1 border border-black/10 bg-[#f6f1e8] p-3 text-sm shadow-xl" aria-label="Navigasi toko mobile">
-                            <a className="px-3 py-2 hover:bg-white/60" href="#catalog">Shop All</a>
-                            <a className="px-3 py-2 hover:bg-white/60" href="#newest">Dress</a>
-                            <a className="px-3 py-2 hover:bg-white/60" href="#oneset">One Set</a>
-                            <a className="px-3 py-2 hover:bg-white/60" href="#catalog">Premium Series</a>
-                            <Link className="px-3 py-2 font-display text-lg font-semibold italic text-[#51a2a4] hover:bg-white/60" href="/lencir">Lencir</Link>
-                            <Link className="px-3 py-2 font-display text-lg font-semibold italic text-[#f5a623] hover:bg-white/60" href="/riber-fest/vol-3">Riber Fest</Link>
-                            <a className="mt-2 border-t border-black/10 px-3 pt-3 hover:bg-white/60" href="#footer">Track Order</a>
-                        </nav>
-                    </details>
                 </div>
                 </div>
             </header>
